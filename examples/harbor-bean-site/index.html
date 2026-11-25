@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harbor Bean Co.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Fresh roasts by the water.</h1>
+            <p>Small-batch specialty coffee roasted with care in Example Town.</p>
+            <a href="#get-a-bag" class="btn">Get a bag</a>
+        </div>
+    </section>
+
+    <section class="story" id="our-story">
+        <div class="container">
+            <h2>Brand story</h2>
+            <p>It all started in an old boat shed right by the harbor. Two friends shared a simple belief: great coffee brings neighbors together. With a lot of care and dedication, we started roasting small batches every Tuesday and Friday.</p>
+            <p>We aren't trying to reinvent the wheel. We just want to roast sweet, clean, honest coffee that feels like home. Stop by on a Tuesday or Friday, and see what happens when old friends turn a shared passion into a neighborhood ritual. We'll always have a cup waiting.</p>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <div class="container">
+            <h2>Menu</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Harbor House</h3>
+                    <p class="description">A smooth everyday filter blend.</p>
+                    <p class="notes">Flavour Notes: Chocolate, toasted almond.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Seasonal Pour-Over</h3>
+                    <p class="description">A rotating single origin.</p>
+                    <p class="notes">Flavour Notes: Bright, citrus, honey.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Low Tide Decaf</h3>
+                    <p class="description">A Swiss-water decaf that still tastes like coffee.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hours-location" id="hours">
+        <div class="container">
+            <h2>Shop Hours</h2>
+            <ul class="hours-list">
+                <li>Mon–Fri 7:00–16:00</li>
+                <li>Sat 8:00–14:00</li>
+                <li>Sun closed</li>
+            </ul>
+            <p class="location">By the old harbor, Example Town</p>
+        </div>
+    </section>
+
+    <section class="form-section" id="get-a-bag">
+        <div class="container">
+            <h2>Get a bag of Harbor Bean</h2>
+            <p class="form-help">Tell us where to send your beans or which blend you'd like to reserve for pickup.</p>
+            
+            <div class="form-container">
+                <form id="reservation-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product">Product choice</label>
+                        <select id="product" name="product" required>
+                            <option value="" disabled selected></option>
+                            <option value="harbor-house">Harbor House</option>
+                            <option value="seasonal">Seasonal Pour-Over</option>
+                            <option value="low-tide">Low Tide Decaf</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Reserve beans</button>
+                </form>
+                <div id="success-message" class="success-message">
+                    Thanks! Your bean request has been noted. We'll have it ready for you.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Harbor Bean Co. is a fictional local specialty coffee roaster created for demonstration purposes.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('reservation-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+.env
+.env.*
+*.key
+scripts/state.json
+state.json
+__pycache__/
+node_modules/
